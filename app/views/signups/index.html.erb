@@ -1,0 +1,15 @@
+<h1>All the Signups</h1>
+
+<ul>
+
+<% @signups.each do |signup| %>
+<li>
+
+ <%= link_to  signup.activity.name, "/signups/#{signup.id}" %>
+ <p> joined by </p>
+ <%= link_to  signup.camper.name, "/signups/#{signup.id}" %>
+ <p> activity </p>
+</li>
+<%end%>
+
+</ul>

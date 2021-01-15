@@ -1,0 +1,15 @@
+<h2>Here the Camper</h2>
+<th> Name: </th>    
+    <%= @camper.name %>
+    <p> _________________________ </p>
+<th> Age: </th>
+    <%= @camper.age %>
+    <p> _________________________ </p>
+<th> Activities: </th> 
+
+    <% @camper.signups.each do |signup| %>
+    <li> <%= signup.activity.name %> at <%= signup.time %> </li>
+    
+    <%end%>
+    
+    <%= button_to "New Signup", new_signup_path, method: :get %>
